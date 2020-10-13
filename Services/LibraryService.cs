@@ -62,7 +62,7 @@ namespace CodeLibrary.Services
 
     internal int FindIndexByTitle(string title)
     {
-      return Books.FindIndex(b => b.Title == title);
+      return Books.FindIndex(b => b.Title.ToLower() == title);
     }
 
     internal void Remove(int index)
